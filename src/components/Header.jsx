@@ -1,8 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
-// import transitions from "bootstrap";
+import transitions from "bootstrap";
 
-const Header = ({ handleLogout, user, active, setActive }) => {
+const Header = ({ active, setActive, user, handleLogout }) => {
   const userId = user?.uid;
   return (
     <nav className='navbar navbar-expand-lg navbar-light bg-light'>
