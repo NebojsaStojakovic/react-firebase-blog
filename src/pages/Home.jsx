@@ -48,7 +48,7 @@ const Home = ({ setActive, user }) => {
         setTags(uniqueTags);
         setBlogs(list);
         setLoading(false);
-        // setActive("home");
+        setActive("home");
       },
       (error) => {
         console.log(error);

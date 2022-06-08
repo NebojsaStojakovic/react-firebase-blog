@@ -33,23 +33,23 @@ const BlogSection = ({ handleDelete, blogs, user }) => {
             <Link to={`/detail/${item.id}`}>
               <button className='btn btn-read'>Read More</button>
             </Link>
-            {/* {userId && item.userId === userId && ( */}
-            <div style={{ float: "right" }}>
-              <FontAwesome
-                name='trash'
-                style={{ margin: "15px", cursor: "pointer" }}
-                size='2x'
-                onClick={() => handleDelete(item.id)}
-              />
-              <Link to={`/update/${item.id}`}>
+            {userId && item.userId === userId && (
+              <div style={{ float: "right" }}>
                 <FontAwesome
-                  name='edit'
-                  style={{ cursor: "pointer" }}
+                  name='trash'
+                  style={{ margin: "15px", cursor: "pointer" }}
                   size='2x'
+                  onClick={() => handleDelete(item.id)}
                 />
-              </Link>
-            </div>
-            {/* )} */}
+                <Link to={`/update/${item.id}`}>
+                  <FontAwesome
+                    name='edit'
+                    style={{ cursor: "pointer" }}
+                    size='2x'
+                  />
+                </Link>
+              </div>
+            )}
           </div>
         </div>
       ))}
